@@ -1,0 +1,27 @@
+{
+	"name": "@happier-path/core",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"build": "pnpm package",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+		"dev": "vite dev",
+		"package": "svelte-kit sync && svelte-package && publint",
+		"prepare": "svelte-kit sync || echo ''"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^6.0.1",
+		"@sveltejs/kit": "^2.22.2",
+		"@sveltejs/vite-plugin-svelte": "^5.1.0",
+		"dlv": "^1.1.3",
+		"svelte": "^5.34.9",
+		"svelte-check": "^4.2.1",
+		"typescript": "^5.8.3",
+		"vite": "^6.3.5",
+		"publint": "catalog:",
+		"eslint": "catalog:",
+		"eslint-plugin-svelte": "catalog:"
+	}
+}

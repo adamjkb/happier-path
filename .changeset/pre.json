@@ -1,0 +1,8 @@
+{
+  "mode": "pre",
+  "tag": "next",
+  "initialVersions": {
+    "@happier-path/core": "0.0.1"
+  },
+  "changesets": []
+}
