@@ -1,5 +1,7 @@
+import { init as dbInit } from '$lib/_db/init.js'
 import { AuthenticationManager } from '$lib/managers/auth'
 import { BasicAuthentication } from '$lib/strategies/basic-auth'
+import { CookieAuthentication } from '$lib/strategies/cookie'
 import { sequence } from '@sveltejs/kit/hooks'
 
 /** @type {import('@sveltejs/kit').Handle} */
@@ -11,7 +13,7 @@ export async function fallback({ event, resolve }) {
 
 
 /**
- * 
+ *
  * @returns {import('@sveltejs/kit').Handle}
  */
 const happierHandlers = ({ authStrategies } = {}) => {
@@ -25,7 +27,7 @@ const happierHandlers = ({ authStrategies } = {}) => {
 		// 				status: 500
 		// 			})
 		// 		}
-		// 	}	
+		// 	}
 		// } catch (err) {
 		// 	console.log(err)
 		// 	return err
@@ -47,6 +49,12 @@ const happierHandlers = ({ authStrategies } = {}) => {
 
 export const handle = sequence(happierHandlers({
 	authStrategies: {
-		'simple': new BasicAuthentication({ username: 'x', password: 'y' })
+		'simple': new BasicAuthentication({ username: 'x', password: 'y' }),
+		'cookie': new CookieAuthentication({ cookie: 'sid' })
 	},
 }), fallback)
+
+
+export const init = async () => {
+	await dbInit()
+}

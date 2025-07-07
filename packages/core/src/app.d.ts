@@ -10,12 +10,12 @@ declare global {
 		interface Locals {
 			/**
 			 * Happier internal managers and configuration objects
-			 * 
+			 *
 			 */
 			happier?: {
 				authManager?: AuthenticationManager
 			};
-			/** 
+			/**
 			 * Auth outcome
 			 */
 			auth?: BaseSuccesfullAuth | BaseFailedAuth
