@@ -1,42 +1,5 @@
 import { getRequestEvent } from '$app/server'
-import { Authentication, Continue, unauthorized } from '$lib/responses'
-
-// export const basicAuthStrategy = ({ username, password, realm = 'server' } = {}) => {
-//     /** @TODO Check if username is valid */
-//     /** @TODO Check if password is valid */
-//     /** @TODO Validate settings */
-
-//     return {
-//         authenticate: async () => {
-//             const event = getRequestEvent()
-
-//             if (!event.request.headers.has('authorization')) {
-//                 throw unauthorized(null, {
-//                     headers: {
-//                         'WWW-Authenticate': `Basic realm="${realm}"`
-//                     }
-//                 })
-//             } else {
-//                 const authHeader = event.request.headers.get('authorization')
-//                 if (authHeader) {
-//                     const parts = authHeader.split(/\s+/);
-//                     // @TODO Verify if parts[0] is `Basic`
-
-//                     const [u, p] = Buffer.from(parts[1], 'base64').toString().split(':')
-
-//                     if (u === username && p === password) {
-//                         return new Authenticated({
-//                             credentials: {
-//                                 id: username
-//                             }
-//                         })
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
+import { Authentication, unauthorized } from '$lib/responses'
 
 export class BasicAuthentication {
 	#username = ''

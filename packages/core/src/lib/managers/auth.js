@@ -3,7 +3,6 @@ import { Authentication, forbidden, MissingAuthentication, unauthorized } from '
 import { delveTemplate } from '$lib/utils/string'
 import { error, redirect } from '@sveltejs/kit'
 
-/** @import { RouteAuthConfig } from '@sveltejs/kit' */
 /** @import { ScopeModes } from '../../types/auth.d.ts' */
 
 /**

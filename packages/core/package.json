@@ -9,22 +9,27 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
 		"dev": "vite dev",
 		"package": "svelte-kit sync && svelte-package && publint",
-		"prepare": "svelte-kit sync || echo ''"
+		"prepare": "svelte-kit sync || echo ''",
+		"vitest": "vitest"
 	},
 	"devDependencies": {
 		"@libsql/client": "^0.15.9",
 		"@oslojs/encoding": "^1.1.0",
 		"@sveltejs/adapter-auto": "^6.0.1",
-		"@sveltejs/kit": "^2.22.2",
+		"@sveltejs/kit": "^2.22.5",
 		"@sveltejs/vite-plugin-svelte": "^5.1.0",
+		"@vitest/browser": "^3.2.4",
 		"dlv": "^1.1.3",
 		"eslint": "catalog:",
 		"eslint-plugin-svelte": "catalog:",
 		"hash-wasm": "^4.12.0",
+		"playwright": "^1.54.0",
 		"publint": "catalog:",
-		"svelte": "^5.35.2",
+		"svelte": "^5.35.5",
 		"svelte-check": "^4.2.2",
 		"typescript": "^5.8.3",
-		"vite": "^6.3.5"
+		"vite": "^6.3.5",
+		"vitest": "^3.2.4",
+		"zod": "^3.25.76"
 	}
 }

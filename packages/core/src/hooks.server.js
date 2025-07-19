@@ -1,5 +1,6 @@
 import { init as dbInit } from '$lib/_db/init.js'
 import { AuthenticationManager } from '$lib/managers/auth'
+import { configSchema } from '$lib/schemas'
 import { BasicAuthentication } from '$lib/strategies/basic-auth'
 import { CookieAuthentication } from '$lib/strategies/cookie'
 import { sequence } from '@sveltejs/kit/hooks'
@@ -17,6 +18,8 @@ export async function fallback({ event, resolve }) {
  * @returns {import('@sveltejs/kit').Handle}
  */
 const happierHandlers = ({ authStrategies } = {}) => {
+	const res = configSchema.parse({authStrategies})
+	console.log(res)
 	return async ({event, resolve}) => {
 
 		// try {
