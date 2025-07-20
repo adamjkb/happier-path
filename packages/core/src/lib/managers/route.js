@@ -26,6 +26,7 @@ export const routeManagerAuthSchema = z.object({
 })
 
 
+
 export const routeManagerSchema = z.object({
 	auth: routeManagerAuthSchema.optional(),
 	handler: z.instanceof(Function)

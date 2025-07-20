@@ -1,7 +1,11 @@
 // See https://svelte.dev/docs/kit/types#app.d.ts
 
 import type { AuthenticationManager } from "$lib/managers/auth";
-import type { AuthMode, BaseFailedAuth, BaseSuccesfullAuth } from "./types/auth";
+import type {
+	AuthMode,
+	BaseFailedAuth,
+	BaseSuccesfullAuth,
+} from "./types/auth";
 
 // for information about these interfaces
 declare global {
@@ -13,13 +17,12 @@ declare global {
 			 *
 			 */
 			happier?: {
-				authManager?: AuthenticationManager
+				authManager?: AuthenticationManager;
 			};
 			/**
 			 * Auth outcome
 			 */
-			auth?: BaseSuccesfullAuth | BaseFailedAuth
-
+			auth?: BaseSuccesfullAuth | BaseFailedAuth;
 		}
 		// interface PageData {}
 		// interface PageState {}
