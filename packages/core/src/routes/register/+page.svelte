@@ -3,10 +3,10 @@
 	import { goto } from '$app/navigation'
 </script>
 <svelte:head>
-	<title>Sing in</title>
+	<title>Registration</title>
 </svelte:head>
 <form
-	data-testid='signin-form'
+	data-testid='register-form'
 	method='POST'
 	use:enhance={() => {
 		return async ({ result }) => {
@@ -30,5 +30,5 @@
 			name='password'
 			type='password'>
 	</label>
-	<button type='submit'>Log in</button>
+	<button type='submit'>Register</button>
 </form>

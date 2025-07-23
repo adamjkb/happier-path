@@ -11,10 +11,11 @@ export const load = routeManager({
 		},
 	},
 	/** @type {import('./$types').PageServerLoad} */
-	handler: async function ({ request, locals }) {
-		console.log(locals.auth)
+	handler: async function ({ locals }) {
 		return {
-			hi: locals.auth?.credentials?.username
+			...(locals.auth?.credentials && ({
+				user: locals.auth?.credentials
+			}))
 		}
 	}
 })

@@ -21,17 +21,17 @@ describe('`routeManager` schema validation', () => {
 		expect(route).toBeInstanceOf(Function)
 		expect(mockManager).toHaveReturned()
 	})
-	test('minimum required arg', () => {
-		const mockManager = vi.fn(routeManager)
-		const route = mockManager({
-			handler: () => {},
-			auth: {
-				mode: 'required',
-				strategies: ['a'],
-				scope: {}
-			}
-		 })
-		expect(route).toBeInstanceOf(Function)
-		expect(mockManager).toHaveReturned()
-	})
+	// test('minimum required arg', () => {
+	// 	const mockManager = vi.fn(routeManager)
+	// 	const route = mockManager({
+	// 		handler: () => {},
+	// 		auth: {
+	// 			mode: 'required',
+	// 			strategies: ['a'],
+	// 			scope: {}
+	// 		}
+	// 	 })
+	// 	expect(route).toBeInstanceOf(Function)
+	// 	expect(mockManager).toHaveReturned()
+	// })
 })

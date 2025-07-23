@@ -1,4 +1,5 @@
 import { db } from './client'
+import { user1, user2 } from './seed-data'
 import { createUser } from './users'
 
 async function createTables() {
@@ -30,8 +31,8 @@ async function seedData() {
 		const { rows } = await tx.execute('SELECT * FROM users')
 		// Don't reseed if rows have data
 		if (rows.length === 0) {
-			await createUser({ username: 'alice', password: '123' }, tx)
-			await createUser({ username: 'bob', password: '123' }, tx)
+			await createUser({ ...user1 }, tx)
+			await createUser({ ...user2 }, tx)
 			await tx.commit()
 		}
 	} catch (err) {

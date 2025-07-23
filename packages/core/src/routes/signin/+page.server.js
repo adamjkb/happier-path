@@ -1,7 +1,7 @@
 import { db } from '$lib/_db/client'
 import { getUserByUsername } from '$lib/_db/users'
 import { routeManager } from '$lib/managers/route'
-import { CookieAuthentication } from '$lib/strategies/cookie'
+import { CookieAuthentication } from '$lib/_strategies/cookie'
 import { redirect } from '@sveltejs/kit'
 import { fail } from '@sveltejs/kit'
 import { argon2Verify } from 'hash-wasm'
@@ -28,7 +28,6 @@ export const actions = {
 		const password = data.get('password')
 
 		const user = await getUserByUsername({ username }, db)
-
 		if (password && user && user.password) {
 			const validPassword = await argon2Verify({
 				hash: user.password,
