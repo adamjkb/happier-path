@@ -30,7 +30,7 @@
 	},
 	"devDependencies": {
 		"@oslojs/encoding": "^1.1.0",
-		"@playwright/test": "^1.56.1",
+		"@playwright/test": "catalog:",
 		"@sveltejs/adapter-node": "^5.4.0",
 		"@sveltejs/kit": "^2.47.2",
 		"@sveltejs/package": "^2.5.4",

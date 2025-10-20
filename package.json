@@ -25,6 +25,7 @@
 		"@changesets/cli": "^2.29.7",
 		"@eslint/js": "catalog:",
 		"@svitejs/changesets-changelog-github-compact": "^1.2.0",
+		"@playwright/test": "catalog:",
 		"eslint-plugin-svelte": "catalog:",
 		"globals": "^16.4.0"
 	}
