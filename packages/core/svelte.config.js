@@ -12,6 +12,9 @@ const config = {
 		adapter: adapter({
 			out: '.build'
 		}),
+		alias: {
+			'$dev': './src/dev/'
+		},
 		// DO NOT COPY ;)
 		csrf: {
 			trustedOrigins: ['*']

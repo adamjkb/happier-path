@@ -1,5 +1,5 @@
-import { db } from '$lib/_db/client'
-import { createUser } from '$lib/_db/users'
+import { db } from '$dev/db/client'
+import { createUser } from '$dev/db/users'
 import { routeManager } from '$lib/managers/route'
 import { redirect } from '@sveltejs/kit'
 

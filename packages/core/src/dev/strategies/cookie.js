@@ -1,6 +1,6 @@
 import { getRequestEvent } from '$app/server'
-import { db } from '$lib/_db/client'
-import { createSession, deleteSessionById, generateSessionToken, getSessionByToken, updateSessionExpiresAtById } from '$lib/_db/sessions'
+import { db } from '$dev/db/client'
+import { createSession, deleteSessionById, generateSessionToken, getSessionByToken, updateSessionExpiresAtById } from '$dev/db/sessions'
 import { Authentication, unauthorized } from '$lib/responses'
 
 export class CookieAuthentication {

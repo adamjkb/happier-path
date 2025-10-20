@@ -1,7 +1,7 @@
-import { init as dbInit } from '$lib/_db/init.js'
+import { init as dbInit } from '$dev/db/init.js'
 import { happierHook } from '$lib/hooks'
-import { BasicAuthentication } from '$lib/_strategies/basic-auth'
-import { CookieAuthentication } from '$lib/_strategies/cookie'
+import { BasicAuthentication } from '$dev/strategies/basic-auth'
+import { CookieAuthentication } from '$dev/strategies/cookie'
 import { sequence } from '@sveltejs/kit/hooks'
 
 /** @type {import('@sveltejs/kit').Handle} */
