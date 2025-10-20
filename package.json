@@ -7,7 +7,7 @@
 	},
 	"type": "module",
 	"scripts": {
-		"test": "pnpm test -r --filter=./packages/*",
+		"test": "pnpm run -r --filter='./packages/*' --workspace-concurrency=1 test",
 		"release": "changeset publish",
 		"lint": "pnpm -r lint && eslint --cache --cache-location node_modules/.eslintcache 'packages/**/*.js'",
 		"lint:fix": "eslint --ignore-path .gitignore --fix --cache --cache-location node_modules/.eslintcache 'packages/**/*.js'",

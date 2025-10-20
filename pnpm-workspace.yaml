@@ -1,7 +1,6 @@
 packages:
   - packages/*
-  - packages/core/src/frontend
-  - playgrounds
+  - playgrounds/*
 
 catalog:
   publint: ^0.3.15
