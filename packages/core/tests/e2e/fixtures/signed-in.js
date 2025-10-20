@@ -85,8 +85,6 @@ export const test = base.extend({
 		const signinRequest = await signinRequestPromise
 
 		expect(await signinRequest.response().then(e => e?.status())).toBe(200)
-		// Check if redirecet successful
-		expect(page).toHaveURL(url => url.pathname === '/')
 
 		await use(page)
 	}

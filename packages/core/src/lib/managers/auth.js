@@ -259,6 +259,7 @@ export class AuthenticationManager {
 			throw forbidden(`Insufficient scope. ${scope_errors.join(', ')}.`)
 		}
 
+		return true
 	}
 
 	#acces() {
@@ -303,7 +304,7 @@ export class AuthenticationManager {
 	async handleLoad(config) {
 		return run_with_config(config, async () => {
 			const event = getRequestEvent()
-			event.locals.auth = event.locals.auth || {}
+			event.locals.auth ??= event.locals.auth || {}
 			try {
 				await this.#authenticate()
 			} catch (err) {

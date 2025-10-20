@@ -1,9 +1,10 @@
 <script>
 	import { applyAction, enhance } from '$app/forms'
 	import { goto } from '$app/navigation'
+	import { signinForm } from './signin.remote'
 </script>
 <svelte:head>
-	<title>Sing in</title>
+	<title>Sign in</title>
 </svelte:head>
 <form
 	data-testid='signin-form'
@@ -31,4 +32,22 @@
 			type='password'>
 	</label>
 	<button type='submit'>Log in</button>
+</form>
+
+<form
+	data-testid='signin-form-remote'
+	{...signinForm}>
+	<label>
+		Username
+		<input
+			name='username'
+			type='text'>
+	</label>
+	<label>
+		Password
+		<input
+			name='password'
+			type='password'>
+	</label>
+	<button {...signinForm.buttonProps}>Log in</button>
 </form>

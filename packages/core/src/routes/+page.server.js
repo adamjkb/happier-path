@@ -5,13 +5,15 @@ export const load = routeManager({
 		strategies: ['cookie'],
 		mode: 'try',
 		scope: {
-			// required: ['user-id-{credentials.id}'],
+			// required: ['{params.id}'],
 			// forbidden: ['regular'],
 			// some: ['basic'],
 		},
 	},
 	/** @type {import('./$types').PageServerLoad} */
-	handler: async function ({ locals }) {
+	handler: async function ({ locals, params }) {
+
+		console.log(locals.auth)
 		return {
 			...(locals.auth?.credentials && ({
 				user: locals.auth?.credentials

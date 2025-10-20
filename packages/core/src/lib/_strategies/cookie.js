@@ -29,7 +29,8 @@ export class CookieAuthentication {
 					return new Authentication({
 						credentials: {
 							id: session.userId,
-							username: session.username
+							username: session.username,
+							scope: [`username:${session.username}`]
 						},
 						artifacts: {
 							session
