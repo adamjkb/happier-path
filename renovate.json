@@ -1,0 +1,27 @@
+{
+	"extends": [
+		"github>whitesource/merge-confidence:beta",
+		"config:base",
+		":preserveSemverRanges",
+		"group:allNonMajor",
+		":semanticCommitTypeAll(chore)"
+	],
+	"bumpVersion": "patch",
+	"pin": {
+		"enabled": false
+	},
+	"ignoreDeps": [
+		"@types/node",
+		"typescript"
+	],
+	"packageRules": [
+		{
+			"groupName": "Svelte+Sveltekit",
+			"matchPackagePatterns": [
+				"@sveltejs",
+				"svelte*",
+				"*svelte"
+			]
+		}
+	]
+}
