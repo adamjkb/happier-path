@@ -2,7 +2,7 @@
   "mode": "pre",
   "tag": "next",
   "initialVersions": {
-    "@happier-path/core": "0.0.1"
+    "@happier-path/core": "0.0.0"
   },
   "changesets": [
     "wet-papers-cheer"

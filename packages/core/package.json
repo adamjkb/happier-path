@@ -1,7 +1,6 @@
 {
 	"name": "@happier-path/core",
-	"private": true,
-	"version": "0.0.2-next.0",
+	"version": "0.0.1-next.0",
 	"type": "module",
 	"exports": {
 		".": {
