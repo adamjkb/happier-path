@@ -4,5 +4,7 @@
   "initialVersions": {
     "@happier-path/core": "0.0.1"
   },
-  "changesets": []
+  "changesets": [
+    "wet-papers-cheer"
+  ]
 }
