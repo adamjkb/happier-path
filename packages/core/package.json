@@ -8,6 +8,25 @@
 			"svelte": "./dist/index.js"
 		}
 	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/adamjkb/happier-path/issues"
+	},
+	"homepage": "https://github.com/adamjkb/happier-path",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adamjkb/happier-path",
+		"directory": "packages/core"
+	},
+	"author": {
+		"name": "Adam Jakab",
+		"url": "https://adamjkb.com"
+	},
+	"keywords": [
+		"svelte",
+		"sveltekit",
+		"authentication"
+	],
 	"files": [
 		"dist"
 	],
