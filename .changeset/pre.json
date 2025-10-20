@@ -5,6 +5,7 @@
     "@happier-path/core": "0.0.0"
   },
   "changesets": [
+    "solid-trees-check",
     "wet-papers-cheer"
   ]
 }
