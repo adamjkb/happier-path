@@ -1,9 +1,17 @@
 import eslintPluginSvelte from 'eslint-plugin-svelte'
 import globals from 'globals'
 import js from '@eslint/js'
+import { includeIgnoreFile } from '@eslint/compat'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+const gitignorePath = path.resolve(__dirname, '.gitignore')
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
+	includeIgnoreFile(gitignorePath),
 	// add more generic rule sets here, such as:
 	js.configs.recommended,
 	...eslintPluginSvelte.configs['flat/recommended'],
@@ -76,6 +84,7 @@ export default [
 					'selfClosingTag': 'ignore'
 				}
 			],
+			'svelte/no-navigation-without-resolve': 'off',
 			'svelte/no-spaces-around-equal-signs-in-attribute': 'warn',
 			'svelte/shorthand-attribute': 'warn',
 			'svelte/shorthand-directive': 'warn',

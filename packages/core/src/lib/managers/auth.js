@@ -235,7 +235,7 @@ export class AuthenticationManager {
 			const required_scopes = this.#validate_scopes(config.scope.required, template_ctx, 'required')
 
 			if (!required_scopes.is_valid) {
-				scope_errors = [...scope_errors, ...required_scopes?.errors]
+				scope_errors = [...scope_errors, ...required_scopes.errors]
 			}
 		}
 
@@ -243,7 +243,7 @@ export class AuthenticationManager {
 			const forbidden_scopes = this.#validate_scopes(config.scope.forbidden, template_ctx, 'forbidden')
 
 			if (!forbidden_scopes.is_valid) {
-				scope_errors = [...scope_errors, ...forbidden_scopes?.errors]
+				scope_errors = [...scope_errors, ...forbidden_scopes.errors]
 			}
 		}
 
@@ -251,7 +251,7 @@ export class AuthenticationManager {
 			const some_scopes = this.#validate_scopes(config.scope.some, template_ctx, 'some')
 
 			if (!some_scopes.is_valid) {
-				scope_errors = [...scope_errors, ...some_scopes?.errors]
+				scope_errors = [...scope_errors, ...some_scopes.errors]
 			}
 		}
 

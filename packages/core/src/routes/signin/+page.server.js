@@ -22,7 +22,7 @@ export const load = routeManager({
 
 /** @satisfies {import('./$types').Actions} */
 export const actions = {
-	default: async ({ request, cookies, locals }) => {
+	default: async ({ request, locals }) => {
 		const data = await request.formData()
 		const username = String(data.get('username'))
 		const password = data.get('password')

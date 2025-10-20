@@ -38,7 +38,7 @@ test('Access to own edit page', async ({ page, user }) => {
 	expect(authObject).toHaveProperty('artifacts.session.username', user.username)
 })
 
-test('Access to someone else\'s edit page', async ({ page, user }) => {
+test('Access to someone else\'s edit page', async ({ page }) => {
 	const editPage = await page.goto('/user/bob/edit')
 
 	expect(editPage?.status()).toBe(403)
