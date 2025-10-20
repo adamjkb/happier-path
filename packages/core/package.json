@@ -19,6 +19,8 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"vitest": "vitest",
 		"prepublishOnly": "pnpm build",
+		"lint:fix": "eslint . --fix",
+		"lint": "eslint .",
 		"start:e2e": "vite build &&  ORIGIN=http://localhost:4173 PORT=4173 node .build",
 		"test": "pnpm test:e2e",
 		"test:e2e": "playwright test"
