@@ -1,7 +1,7 @@
 {
 	"name": "@happier-path/core",
 	"private": true,
-	"version": "0.0.1",
+	"version": "0.0.2-next.0",
 	"type": "module",
 	"exports": {
 		".": {
@@ -9,7 +9,9 @@
 			"svelte": "./dist/index.js"
 		}
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"build": "pnpm package",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
