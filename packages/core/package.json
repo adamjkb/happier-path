@@ -9,7 +9,7 @@
 		},
 		"./hooks": {
 			"types": "./dist/hooks/index.d.ts",
-			"import": "./dist/hooks/index.js"
+			"svelte": "./dist/hooks/index.js"
 		},
 		"./responses": {
 			"types": "./dist/responses/index.d.ts",
@@ -17,11 +17,11 @@
 		},
 		"./schemas": {
 			"types": "./dist/schemas/index.d.ts",
-			"import": "./dist/schemas/index.js"
+			"svelte": "./dist/schemas/index.js"
 		},
 		"./managers/auth": {
 			"types": "./dist/managers/auth.d.ts",
-			"import": "./dist/managers/auth.js"
+			"svelte": "./dist/managers/auth.js"
 		},
 		"./managers/route": {
 			"types": "./dist/managers/route.d.ts",
