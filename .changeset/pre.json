@@ -5,6 +5,7 @@
     "@happier-path/core": "0.0.0"
   },
   "changesets": [
+    "puny-teams-see",
     "solid-trees-check",
     "wet-papers-cheer"
   ]
