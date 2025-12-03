@@ -6,6 +6,26 @@
 		".": {
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
+		},
+		"./hooks": {
+			"types": "./dist/hooks/index.d.ts",
+			"import": "./dist/hooks/index.js"
+		},
+		"./responses": {
+			"types": "./dist/responses/index.d.ts",
+			"import": "./dist/responses/index.js"
+		},
+		"./schemas": {
+			"types": "./dist/schemas/index.d.ts",
+			"import": "./dist/schemas/index.js"
+		},
+		"./managers/auth": {
+			"types": "./dist/managers/auth.d.ts",
+			"import": "./dist/managers/auth.js"
+		},
+		"./managers/route": {
+			"types": "./dist/managers/route.d.ts",
+			"import": "./dist/managers/route.js"
 		}
 	},
 	"license": "MIT",
@@ -28,7 +48,8 @@
 		"authentication"
 	],
 	"files": [
-		"dist"
+		"dist",
+		"!dist/**.*.spec.*"
 	],
 	"scripts": {
 		"build": "pnpm package",
