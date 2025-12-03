@@ -1,5 +1,11 @@
 # @happier-path/core
 
+## 0.0.1-next.2
+
+### Patch Changes
+
+- Added package.json exports ([#15](https://github.com/adamjkb/happier-path/pull/15))
+
 ## 0.0.1-next.1
 
 ### Patch Changes
