@@ -1,5 +1,11 @@
 # @happier-path/core
 
+## 0.0.1-next.5
+
+### Patch Changes
+
+- Add zod dependency & fix import.js ([#21](https://github.com/adamjkb/happier-path/pull/21))
+
 ## 0.0.1-next.4
 
 ### Patch Changes
