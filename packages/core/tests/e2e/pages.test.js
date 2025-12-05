@@ -1,5 +1,5 @@
 import { expect, test as unAuthTest } from '@playwright/test'
-import { test } from './fixtures/signed-in'
+import { test } from './fixtures/signed-in.js'
 
 
 test.describe.configure({

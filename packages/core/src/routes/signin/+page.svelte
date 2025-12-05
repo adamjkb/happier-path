@@ -1,7 +1,7 @@
 <script>
 	import { applyAction, enhance } from '$app/forms'
 	import { goto } from '$app/navigation'
-	import { signinForm } from './signin.remote'
+	import { signinForm } from './signin.remote.js'
 </script>
 <svelte:head>
 	<title>Sign in</title>
