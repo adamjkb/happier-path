@@ -1,4 +1,4 @@
-import { AuthenticationManager } from '$lib/managers/auth'
+import { AuthenticationManager } from '$lib/managers/auth.js'
 import * as z from 'zod/v4'
 
 /**

@@ -1,5 +1,5 @@
 import { describe, expect, test, vi } from 'vitest'
-import { routeManager } from './route'
+import { routeManager } from './route.js'
 import { ZodError } from 'zod/v4'
 
 describe('`routeManager` schema validation', () => {

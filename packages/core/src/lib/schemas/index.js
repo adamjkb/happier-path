@@ -1,6 +1,6 @@
 import * as z from 'zod/v4'
 
-import { Authentication } from '$lib/responses'
+import { Authentication } from '$lib/responses/index.js'
 
 
 export const authenticateFunction = z.function({
