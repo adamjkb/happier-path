@@ -1,6 +1,6 @@
 import { getRequestEvent } from '$app/server'
-import { Authentication, forbidden, MissingAuthentication, unauthorized } from '$lib/responses'
-import { delveTemplate } from '$lib/utils/string'
+import { Authentication, forbidden, MissingAuthentication, unauthorized } from '$lib/responses/index.js'
+import { delveTemplate } from '$lib/utils/string.js'
 import { error, redirect } from '@sveltejs/kit'
 
 /** @import { ScopeModes } from '../../types/auth.d.ts' */
