@@ -8,7 +8,6 @@
 /** @typedef {any} RequestStore */
 /** @import { AsyncLocalStorage } from 'node:async_hooks' */
 
-// eslint-disable-next-line n/prefer-global/process
 export const IN_WEBCONTAINER = !!globalThis.process?.versions?.webcontainer
 
 /** @type {RequestStore | null} */
