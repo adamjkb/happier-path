@@ -1,5 +1,5 @@
-import { getRequestEvent } from '$app/server'
 import { Authentication, forbidden, MissingAuthentication, unauthorized } from '$lib/responses/index.js'
+import { getRequestEvent } from '$lib/utils/event-request.js'
 import { delveTemplate } from '$lib/utils/string.js'
 import { error, redirect } from '@sveltejs/kit'
 
