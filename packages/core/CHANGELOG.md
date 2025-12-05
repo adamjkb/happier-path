@@ -1,5 +1,11 @@
 # @happier-path/core
 
+## 0.0.1-next.6
+
+### Patch Changes
+
+- using our own getEventRequest to replicate sk functionality ([#24](https://github.com/adamjkb/happier-path/pull/24))
+
 ## 0.0.1-next.5
 
 ### Patch Changes
