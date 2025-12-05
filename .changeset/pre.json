@@ -5,8 +5,10 @@
     "@happier-path/core": "0.0.0"
   },
   "changesets": [
+    "dry-pens-wear",
     "puny-teams-see",
     "solid-trees-check",
+    "warm-rings-turn",
     "wet-papers-cheer"
   ]
 }
