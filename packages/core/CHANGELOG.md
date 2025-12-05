@@ -1,5 +1,11 @@
 # @happier-path/core
 
+## 0.0.1-next.4
+
+### Patch Changes
+
+- Fix package.json ([#19](https://github.com/adamjkb/happier-path/pull/19))
+
 ## 0.0.1-next.3
 
 ### Patch Changes
