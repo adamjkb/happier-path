@@ -6,6 +6,8 @@
 <svelte:head>
 	<title>Sign in</title>
 </svelte:head>
+
+Form action login
 <form
 	data-testid='signin-form'
 	method='POST'
@@ -34,6 +36,7 @@
 	<button type='submit'>Log in</button>
 </form>
 
+Remote function login
 <form
 	data-testid='signin-form-remote'
 	{...signinForm}>
