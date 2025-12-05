@@ -35,7 +35,7 @@
 	"homepage": "https://github.com/adamjkb/happier-path",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/adamjkb/happier-path",
+		"url": "git+https://github.com/adamjkb/happier-path.git",
 		"directory": "packages/core"
 	},
 	"author": {
@@ -49,7 +49,7 @@
 	],
 	"files": [
 		"dist",
-		"!dist/**.*.spec.*"
+		"!dist/**/.*.spec.*"
 	],
 	"scripts": {
 		"build": "pnpm package",
@@ -66,10 +66,12 @@
 		"test": "pnpm test:e2e",
 		"test:e2e": "playwright test"
 	},
-	"dependencies": {
-		"@libsql/client": "^0.15.15"
+	"peerDependencies": {
+		"@sveltejs/kit": "^2.5.0",
+		"svelte": ">=5"
 	},
 	"devDependencies": {
+		"@libsql/client": "^0.15.15",
 		"@oslojs/encoding": "^1.1.0",
 		"@playwright/test": "catalog:",
 		"@sveltejs/adapter-node": "^5.4.0",

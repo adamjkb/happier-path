@@ -52,11 +52,10 @@ importers:
         version: 16.4.0
 
   packages/core:
-    dependencies:
+    devDependencies:
       '@libsql/client':
         specifier: ^0.15.15
         version: 0.15.15
-    devDependencies:
       '@oslojs/encoding':
         specifier: ^1.1.0
         version: 1.1.0
