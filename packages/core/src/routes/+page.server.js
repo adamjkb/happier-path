@@ -1,4 +1,4 @@
-import { routeManager } from '$lib/managers/route'
+import { routeManager } from '$lib/managers/route.js'
 
 export const load = routeManager({
 	auth: {

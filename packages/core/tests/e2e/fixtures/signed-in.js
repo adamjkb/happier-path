@@ -1,5 +1,5 @@
 import { expect, test as base} from '@playwright/test'
-import { fillInputByName } from '../utils/fillers'
+import { fillInputByName } from '../utils/fillers.js'
 
 export { expect }
 
