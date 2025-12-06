@@ -1,6 +1,6 @@
-import { db } from './client'
-import { user1, user2 } from './seed-data'
-import { createUser } from './users'
+import { db } from './client.js'
+import { user1, user2 } from './seed-data.js'
+import { createUser } from './users.js'
 
 async function createTables() {
 	await db.batch(
