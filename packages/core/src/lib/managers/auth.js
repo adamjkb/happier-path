@@ -308,16 +308,13 @@ export class AuthenticationManager {
 			try {
 				await this.#authenticate()
 			} catch (err) {
-				console.log('before')
 				await this.#routify(err)
-				console.log('after')
 			}
 
 
 			try {
 				this.#acces()
 			} catch (err) {
-				console.log('erro',err)
 				await this.#routify(err)
 			}
 
