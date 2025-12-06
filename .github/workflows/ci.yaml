@@ -39,13 +39,13 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - node-version: 18
-            os: ubuntu-latest
-            e2e-browser: 'chromium'
           - node-version: 20
             os: ubuntu-latest
             e2e-browser: 'chromium'
           - node-version: 22
+            os: ubuntu-latest
+            e2e-browser: 'chromium'
+          - node-version: 24
             os: ubuntu-latest
             e2e-browser: 'chromium'
     steps:
