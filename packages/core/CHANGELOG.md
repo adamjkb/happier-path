@@ -1,5 +1,11 @@
 # @happier-path/core
 
+## 0.0.1-next.7
+
+### Patch Changes
+
+- Cleanup logs ([#26](https://github.com/adamjkb/happier-path/pull/26))
+
 ## 0.0.1-next.6
 
 ### Patch Changes
