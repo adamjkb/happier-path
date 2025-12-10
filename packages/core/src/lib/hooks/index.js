@@ -14,7 +14,12 @@ export function happierHook({ authStrategies }) {
 		return await with_request_store({ event }, async () => {
 			event.locals.happier ??= {}
 			if (authStrategies) {
-				event.locals.happier.authManager =  new AuthenticationManager({ authStrategies })
+				if (event.locals.happier.authManager instanceof AuthenticationManager) {
+
+					event.locals.happier.authManager.appendStrategies(authStrategies)
+				} else {
+					event.locals.happier.authManager =  new AuthenticationManager({ authStrategies })
+				}
 			}
 
 			const response = await resolve(event)
