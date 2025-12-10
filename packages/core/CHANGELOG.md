@@ -1,5 +1,11 @@
 # @happier-path/core
 
+## 0.0.1-next.8
+
+### Patch Changes
+
+- appending changesets ([#28](https://github.com/adamjkb/happier-path/pull/28))
+
 ## 0.0.1-next.7
 
 ### Patch Changes
