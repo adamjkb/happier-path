@@ -5,6 +5,8 @@ import { error, redirect } from '@sveltejs/kit'
 
 /** @import { ScopeModes } from '../../types/auth.d.ts' */
 
+/** @typedef {import('zod').infer < typeof import('../hooks/index.js').happierHookSchema>} AuthStrategyInput */
+
 /**
  * @type {RouteAuthConfig | null}
  */
@@ -52,8 +54,13 @@ function run_with_config(config, fn) {
 }
 
 export class AuthenticationManager {
-	#strategies = null
+	/** @type {AuthStrategyInput['authStrategies']} */
+	#strategies
 
+	/**
+	 *
+	 * @param {AuthStrategyInput} param0
+	 */
 	constructor({ authStrategies }) {
 		this.#strategies = authStrategies
 	}
@@ -322,4 +329,18 @@ export class AuthenticationManager {
 	}
 
 	getStrategyByName(name) { return this.#strategies[name] }
+
+	/**
+	 *
+	 * @param {AuthStrategyInput['authStrategies']} strategies
+	 */
+	appendStrategies(strategies) {
+		if (
+			Object.keys(this.#strategies).some((v) => Object.keys(strategies).some(s => v ===s))
+		) {
+			throw new Error(`Strategy name already exist. Trying to merge ${Object.keys(strategies)} into existing strategies named: ${Object.keys(this.#strategies)}`)
+		} else {
+			this.#strategies = Object.assign(strategies, this.#strategies)
+		}
+	}
 }
