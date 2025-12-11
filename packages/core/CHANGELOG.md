@@ -1,5 +1,11 @@
 # @happier-path/core
 
+## 0.0.1-next.10
+
+### Patch Changes
+
+- Remove authentication strategy merge functionality ([#32](https://github.com/adamjkb/happier-path/pull/32))
+
 ## 0.0.1-next.9
 
 ### Patch Changes
