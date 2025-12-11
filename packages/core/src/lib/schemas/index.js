@@ -10,12 +10,12 @@ export const authenticateFunction = z.function({
 
 const authStrategyLike = z.record(
 	z.string(),
-	z.object({
+	z.strictObject({
 		authenticate: z.instanceof(Function)
 	})
 )
 
-export const configSchema = z.object({
+export const configSchema = z.strictObject({
 	authStrategies: authStrategyLike
 }).required()
 

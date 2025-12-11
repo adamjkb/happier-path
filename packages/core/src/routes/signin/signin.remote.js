@@ -6,7 +6,7 @@ import { fail, redirect } from '@sveltejs/kit'
 import { argon2Verify } from 'hash-wasm'
 import * as z from 'zod'
 
-const signinFormSchema = z.object({
+const signinFormSchema = z.strictObject({
 	username: z.string(),
 	password: z.string(),
 })

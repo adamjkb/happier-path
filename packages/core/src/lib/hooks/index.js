@@ -29,11 +29,11 @@ export function happierHook({ authStrategies }) {
 
 const authStrategyLikeRecord = z.record(
 	z.string(),
-	z.object({
+	z.strictObject({
 		authenticate: z.instanceof(Function)
 	})
 )
 
-export const happierHookSchema = z.object({
+export const happierHookSchema = z.strictObject({
 	authStrategies: authStrategyLikeRecord
 }).required()
