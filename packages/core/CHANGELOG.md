@@ -1,5 +1,11 @@
 # @happier-path/core
 
+## 0.0.1-next.11
+
+### Patch Changes
+
+- Stricter zod schema ([#34](https://github.com/adamjkb/happier-path/pull/34))
+
 ## 0.0.1-next.10
 
 ### Patch Changes
