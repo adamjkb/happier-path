@@ -10,7 +10,7 @@ export function routeManager(args) {
 
 	return async (event) => {
 		if (auth) {
-			await event.locals.happier?.authManager?.handleLoad(auth)
+			await event.locals.happier.authManager.handleLoad(auth)
 		}
 		return handler?.(event)
 	}
