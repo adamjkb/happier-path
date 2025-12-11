@@ -1,5 +1,11 @@
 # @happier-path/core
 
+## 0.0.1-next.9
+
+### Patch Changes
+
+- Prevent object mutation while merging strategies ([#30](https://github.com/adamjkb/happier-path/pull/30))
+
 ## 0.0.1-next.8
 
 ### Patch Changes
