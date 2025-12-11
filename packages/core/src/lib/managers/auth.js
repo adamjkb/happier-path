@@ -334,13 +334,13 @@ export class AuthenticationManager {
 	 *
 	 * @param {AuthStrategyInput['authStrategies']} strategies
 	 */
-	appendStrategies(strategies) {
+	mergeStrategies(strategies) {
 		if (
 			Object.keys(this.#strategies).some((v) => Object.keys(strategies).some(s => v ===s))
 		) {
 			throw new Error(`Strategy name already exist. Trying to merge ${Object.keys(strategies)} into existing strategies named: ${Object.keys(this.#strategies)}`)
 		} else {
-			this.#strategies = Object.assign(strategies, this.#strategies)
+			this.#strategies = Object.assign(structuredClone(strategies), this.#strategies)
 		}
 	}
 }

@@ -15,8 +15,7 @@ export function happierHook({ authStrategies }) {
 			event.locals.happier ??= {}
 			if (authStrategies) {
 				if (event.locals.happier.authManager instanceof AuthenticationManager) {
-
-					event.locals.happier.authManager.appendStrategies(authStrategies)
+					event.locals.happier.authManager.mergeStrategies(authStrategies)
 				} else {
 					event.locals.happier.authManager =  new AuthenticationManager({ authStrategies })
 				}
