@@ -15,7 +15,7 @@ export function happierHook({ authStrategies }) {
 			event.locals.happier ??= {}
 			if (authStrategies) {
 				if (event.locals.happier.authManager instanceof AuthenticationManager) {
-					event.locals.happier.authManager.mergeStrategies(authStrategies)
+					throw new Error('@happier-path/core authentication manager is already initialized.')
 				} else {
 					event.locals.happier.authManager =  new AuthenticationManager({ authStrategies })
 				}

@@ -81,7 +81,7 @@ export class AuthenticationManager {
 			if (thrownOutcome instanceof Response) {
 				errorResponse = thrownOutcome
 			} else {
-				errorResponse = new Response('Failed to run strategy', {
+				errorResponse = new Response(`Failed to run ${name} strategy. Reason: ${thrownOutcome}`, {
 					status: 500
 				})
 			}
@@ -329,18 +329,4 @@ export class AuthenticationManager {
 	}
 
 	getStrategyByName(name) { return this.#strategies[name] }
-
-	/**
-	 *
-	 * @param {AuthStrategyInput['authStrategies']} strategies
-	 */
-	mergeStrategies(strategies) {
-		if (
-			Object.keys(this.#strategies).some((v) => Object.keys(strategies).some(s => v ===s))
-		) {
-			throw new Error(`Strategy name already exist. Trying to merge ${Object.keys(strategies)} into existing strategies named: ${Object.keys(this.#strategies)}`)
-		} else {
-			this.#strategies = Object.assign(structuredClone(strategies), this.#strategies)
-		}
-	}
 }
