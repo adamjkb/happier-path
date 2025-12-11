@@ -16,7 +16,7 @@ export function routeManager(args) {
 	}
 }
 
-export const routeManagerAuthSchema = z.object({
+export const routeManagerAuthSchema = z.strictObject({
 	strategies: z.array(z.string()).min(1),
 	mode: z.enum(['try', 'required']).default('required'),
 	scope: z.partialRecord(
@@ -27,7 +27,7 @@ export const routeManagerAuthSchema = z.object({
 
 
 
-export const routeManagerSchema = z.object({
+export const routeManagerSchema = z.strictObject({
 	auth: routeManagerAuthSchema.optional(),
 	handler: z.instanceof(Function)
 })
