@@ -1,5 +1,11 @@
 # @happier-path/core
 
+## 0.0.1-next.12
+
+### Patch Changes
+
+- Migrate to authorized function instead of classes to prevent vite prebundling the Authentication class twice ([#37](https://github.com/adamjkb/happier-path/pull/37))
+
 ## 0.0.1-next.11
 
 ### Patch Changes
