@@ -20,6 +20,13 @@ export const forbidden = (body, init) => {
 	})
 }
 
+/**
+ * @param {{ credentials: any; artifacts: any; }} arg
+ */
+export const authorized = ({ credentials, artifacts }) => {
+	return new Authentication({credentials, artifacts})
+}
+
 export class Authentication {
 	artifacts = null
 	credentials = null

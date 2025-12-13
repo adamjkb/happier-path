@@ -1,7 +1,7 @@
 import { getRequestEvent } from '$app/server'
-import { db } from '$dev/db/client'
-import { createSession, deleteSessionById, generateSessionToken, getSessionByToken, updateSessionExpiresAtById } from '$dev/db/sessions'
-import { Authentication, unauthorized } from '$lib/responses'
+import { db } from '$dev/db/client.js'
+import { createSession, deleteSessionById, generateSessionToken, getSessionByToken, updateSessionExpiresAtById } from '$dev/db/sessions.js'
+import { unauthorized, authorized } from '$lib/responses/index.js'
 
 export class CookieAuthentication {
 	#cookie = 'sid'
@@ -26,7 +26,7 @@ export class CookieAuthentication {
 			} else {
 				const isSessionValid = await this.validateSession(session)
 				if (isSessionValid) {
-					return new Authentication({
+					return authorized({
 						credentials: {
 							id: session.userId,
 							username: session.username,
