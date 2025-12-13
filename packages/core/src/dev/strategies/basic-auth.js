@@ -1,5 +1,5 @@
 import { getRequestEvent } from '$app/server'
-import { Authentication, unauthorized } from '$lib/responses'
+import { authorized, unauthorized } from '$lib/responses/index.js'
 
 export class BasicAuthentication {
 	#username = ''
@@ -32,7 +32,7 @@ export class BasicAuthentication {
 				const [u, p] = Buffer.from(parts[1], 'base64').toString().split(':')
 
 				if (u === this.#username && p === this.#password) {
-					return new Authentication({
+					return authorized({
 						credentials: {
 							id: this.#username,
 						},
