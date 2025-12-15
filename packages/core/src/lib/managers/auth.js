@@ -74,7 +74,7 @@ export class AuthenticationManager {
 			authentication = await strategy.authenticate()
 
 
-			if (authentication instanceof Authentication === false) {
+			if (authentication instanceof Authentication === false && authentication?.constructor?.name !== 'Authentication') {
 				throw new Response(null, { status: 500 })
 			}
 		} catch (thrownOutcome) {
@@ -105,7 +105,7 @@ export class AuthenticationManager {
 				return outcome.errorResponse
 			}
 
-			if (outcome.errorResponse instanceof MissingAuthentication) {
+			if (outcome.errorResponse instanceof MissingAuthentication || outcome.errorResponse?.constructor?.name === 'MissingAuthentication') {
 				// Missing authenticated
 				return outcome.errorResponse
 			}
@@ -151,7 +151,7 @@ export class AuthenticationManager {
 				return
 			}
 
-			if (outcome_error instanceof MissingAuthentication === false) {
+			if (outcome_error instanceof MissingAuthentication === false || outcome.errorResponse?.constructor?.name !== 'MissingAuthentication') {
 				return outcome_error
 			}
 		}
