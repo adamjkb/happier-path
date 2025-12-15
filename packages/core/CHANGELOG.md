@@ -1,5 +1,11 @@
 # @happier-path/core
 
+## 0.0.1-next.13
+
+### Patch Changes
+
+- remove instance of comparison ([#39](https://github.com/adamjkb/happier-path/pull/39))
+
 ## 0.0.1-next.12
 
 ### Patch Changes
