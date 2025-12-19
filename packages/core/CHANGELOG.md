@@ -1,5 +1,11 @@
 # @happier-path/core
 
+## 0.0.1-next.14
+
+### Patch Changes
+
+- Added remote functions handler ([#41](https://github.com/adamjkb/happier-path/pull/41))
+
 ## 0.0.1-next.13
 
 ### Patch Changes
