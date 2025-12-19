@@ -18,6 +18,11 @@ const config = {
 		// DO NOT COPY ;)
 		csrf: {
 			trustedOrigins: ['*']
+		},
+	},
+	compilerOptions: {
+		experimental: {
+			async: true
 		}
 	}
 }
