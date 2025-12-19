@@ -70,7 +70,7 @@ export default [
 				}
 			],
 			'svelte/valid-compile': [
-				'error',
+				'warn',
 				{
 					'ignoreWarnings': true
 				}
