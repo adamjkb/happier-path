@@ -40,3 +40,14 @@ export async function getUserByUsername({ username }, connection) {
 
 	return rows[0]
 }
+
+/**
+ * @param {import('@libsql/client').Transaction | import('@libsql/client').Client} connection
+ */
+export async function getAllUsers(connection) {
+	const { rows } = await connection.execute({
+		sql: 'SELECT username FROM users'
+	})
+
+	return rows
+}

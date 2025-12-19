@@ -16,6 +16,24 @@ export function routeManager(args) {
 	}
 }
 
+/**
+ * @template T
+ * @param {Pick<z.infer<typeof routeManagerSchema>, 'auth'> & { handler: T }} args
+ * @returns {T}
+ */
+export function remoteFunctionManager(args) {
+	const { handler, auth } = routeManagerSchema.parse(args)
+
+	return async () => {
+		const { getRequestEvent } = await import('$app/server')
+		const event = getRequestEvent()
+		if (auth) {
+			await event.locals.happier.authManager.handleLoad(auth)
+		}
+		return handler?.(event)
+	}
+}
+
 export const routeManagerAuthSchema = z.strictObject({
 	strategies: z.array(z.string()).min(1),
 	mode: z.enum(['try', 'required']).default('required'),
