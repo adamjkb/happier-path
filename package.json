@@ -1,6 +1,6 @@
 {
 	"name": "happier-path-monorepo",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"private": true,
 	"author": {
 		"name": "Adam Jakab"
@@ -29,6 +29,6 @@
 		"@svitejs/changesets-changelog-github-compact": "^1.2.0",
 		"eslint": "catalog:",
 		"eslint-plugin-svelte": "catalog:",
-		"globals": "^16.5.0"
+		"globals": "^17.0.0"
 	}
 }
