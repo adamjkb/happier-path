@@ -1,6 +1,6 @@
 {
 	"name": "@happier-path/core",
-	"version": "0.0.1-next.14",
+	"version": "0.0.1",
 	"type": "module",
 	"exports": {
 		".": {
@@ -99,7 +99,7 @@
 		"svelte": "^5.46.0",
 		"svelte-check": "^4.3.4",
 		"typescript": "^5.9.3",
-		"vite": "^7.3.0",
+		"vite": "^8.0.0",
 		"vitest": "^4.0.16"
 	}
 }
